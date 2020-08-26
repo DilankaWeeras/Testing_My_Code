@@ -1,0 +1,5 @@
+	I do not like how I cannot add multiple different titles and projects per day. If I am working on 2 seperate things I want to log them as 2 seperate things and then add that to my day.
+	
+	I would prefer if all the logistics are done on the day by day and if the Logs had the days but would also show multiple inputs per day.
+
+	Bug when you edit a log, you cannot click submit but it will save nevertheless. You must hit cancel to exit the log instead of submit. This is located in the LOGs section 

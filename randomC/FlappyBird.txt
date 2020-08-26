@@ -1,0 +1,12 @@
+The physics of flappy bird:
+    the flappy bird has an x and a y coordinate
+        it will also have a velocity and an accelration
+
+No need for an x component because the walls will move
+    gravity pulls the bird down
+    flap force pulls the bird up
+
+Only flap when the bird is falling.
+    This means that the velocity is +
+
+Use the list to store the 
