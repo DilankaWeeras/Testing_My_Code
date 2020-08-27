@@ -1,0 +1,21 @@
+BUS access from Multiple Nodes
+    The CAN communication protocol is a carrier-sense, multiple access protocol with collision detection and abitration om message prioirty
+    
+    CSMA means that eahch node on a bus must wait for a prescibed period of inactivity before attemption to send a message. 
+    CD+AM means that collisions are resolved through a bit-wise arbitration, based on a preprogramed priority.
+    Each message is preprogram for heiarchy and the higher priority identifier always wins the bus access.
+
+
+
+Bitwise arbitration in CAN  
+    NODES       Arbitration ID
+    NODE -1     0x65D (110 0101 1101)
+    NODE -2     0x676 (110 0111 0110)
+    NODE -3     0x659 (110 0101 1001)
+
+If all of these nodes were to access the CAN bus at the same time
+NODE -3 wins because it has the lowest 11-bit identifier.
+    The LOWER the arbitration number the HIGHER the priority
+
+
+

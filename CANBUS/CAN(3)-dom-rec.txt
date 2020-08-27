@@ -1,0 +1,14 @@
+Dominant and Recessive Signals on the BUS
+
+        NODE A
+        dom     rec
+NODE B
+dom     dom     dom
+rec     dom     rec
+
+The output is the bus and the inputs are the nodes
+Dominant but will always overpower the recessive bit
+
+    If the bus is dominant then the node sending recessive will wait
+    Once bus is idle then it will try again
+    

@@ -1,0 +1,85 @@
+CANH and CANL are differecial
+
+Differencial Signaling is a method of communication using complimetary signals
+
+Single ended -
+    High is logical one and Low is logical zero
+    5V may be logical 1
+    0V may be logical 0
+
+Differencial Signal -
+    There is a Vcm for the voltage at the common mode
+    There is a Vdm for the voltage at the diffencial mode
+
+    These are compilmentary signals
+        To send logical 1
+            Singal 1 is +5V
+            Signal 2 is -5V
+        The reciver considers the difference between the signals as the logic
+            10V difference is logical 1
+
+        To send logical 0
+            Signal 1 is -5V
+            Signal 2 is +5V
+        Difference betweend signals 
+            -10V difference is logical 0
+
+        Noise is added equally to both of the signals so the noise cancelling happends automatically
+
+Used in USB, SATA, CAN, and More.
+
+IN CAN-----------
+
+    Want to transmit logical 1
+        CANH - 2.5V
+        CANL - 2.5V
+            Reccesive state of the can bus
+            Difference is 0V
+
+    Want to transmit logical 0
+        CANH - 3.5V
+        CANL - 1.5V
+            Dominant state of the can bus
+            Diffence is 2.5V
+
+Reccesive == 1
+Dominant == 0
+
+
+Example 1:
+
+TI SN65HVD223-HT 3.3V CAN Transciever
+    
+    Functional Block Diagram----------
+        CANH and CANL outputs 
+        D - Driver Signal
+        R - Reciver outputs
+
+        CANL is produces by complimenting the outputs
+            NOT gate
+        
+        Everything you transmit is sent to the reciver
+
+        if D == 1
+            //CANH and CANL go to revessive state
+            Difference = 0V
+        if D == 0 
+            //CANH and CANL go to the dominant state
+            Difference = 2V
+
+    Driver Electrical Characteristics------------
+        Bus output voltage (dominant)
+            D == 0
+                CANH = Vcc // 3.3V
+                CANL = 1.25V //
+                //Difference is 3.3 - 1.25 = 2.05V
+            D == 1
+                CANH = 2.3V
+                CANL = 2.3V
+                //Difference is 0V
+    
+For many Transcievers the output may be the same but the Voltage values may be different
+        
+
+        
+        

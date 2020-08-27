@@ -1,0 +1,12 @@
+ST's bxCAN features
+    2 CAN Controllers are availible CAN1 and CAN 2
+    CAN1 is called MAster bxCAN and CAN2 is slave
+    Both supports CAN protocol version 2.0 A,Both
+    Bit rates up to 1 Mbit'x
+    Three transmit mailboxes
+    Two recive FIFOs with three stages
+    28 filter banks shared between CAN1 and CAN2
+
+bxCAN Block Diagram
+
+    

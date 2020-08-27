@@ -1,0 +1,11 @@
+CAN is Controler area network
+    CANBUS protocol and its features (fundamentals)
+        -bus acces methodlogy
+        -can nodes
+        -can signaling
+    Operating Principles of the CANBUS
+    Different Message Formats of the network
+    Working with the STM32 bxCAN Peripherals
+        bxCAN - basic extended can
+            inside the microcontrolers
+    Code Examples

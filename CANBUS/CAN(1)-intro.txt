@@ -1,0 +1,49 @@
+CAN is the data communication standard in the automotive industy
+
+Lots of CHAOS in the system, therefore the system must be robust and reliable
+
+CAN is a multi-master serial communicaion bus whose basic design specification calls for high speed high noise immunity & error detection features
+
+CAN offers data communication up to 1 Mbit/specification
+
+Error confinement and error detection features make i very reliable.
+
+FEATURES --------
+    Low cost
+    Extreme robustness
+    High data transmission speeds
+    Reliablility, error handleing and noise confinement
+    Automatic re-tranmission of faulty messages
+    Automatic bus disconnection of fualty nodes
+    Functional addressing - data messages do not contain source or destination addresses, only identifies relating to their function.
+
+
+CAN is a broadcast type of bus
+    does not send data from point a to point bus
+        -all devices hear the tranmission
+        -no way to send data specifically to one nodes
+        -all nodes will pick up the traffic on the bus
+
+Can controller on the microcontroller
+ -2 signal ended pins
+    CAN_TX (transfer)
+    CAN_RX (receiver)
+You cannot use these digital signals to communticate with another nodes
+
+Use differecial signals to communicate with other nodes.
+
+There is a need to convert singles ended signals to differencial signal
+ -need a can tranceiver
+    CANH (CAN High) 
+    CANL (CAN Low)
+    -These are differecial signals
+
+The controller and the transceiver make up one node.
+
+Can will have two lines.
+    A High line and a Low line
+        CANH connects to High
+        CANL connects to Low
+
+
+
